@@ -13,3 +13,7 @@ print(f"x6 w 3 mnozeniach to {x6}")
 x7 = x6* x
 print()
 print(f"x7 w 4 mnozeniach to {x7}")
+
+x8 = x4*x4
+print()
+print(f"x8 w 3 mnozeniach to {x8}")
