@@ -64,7 +64,7 @@ def x2ix5ix17(x):
 
 
 #Zadanie 2
-def suma3liczale2zmienne(a,b,c):
+def suma3liczbale2zmienne(a,b,c):
     a=a+b
     a=a+c
     print(f"Suma 3 liczb z użyciem 2 zminnych wynosi {a}")
@@ -73,7 +73,7 @@ def suma3liczale2zmienne(a,b,c):
 #Zadanie 3
 def figura():
     import math    
-    wybor=int(input("Co wybierasz? 1-ostrosłup (kwadrat) 2-walec 3-sześcian "))
+    wybor=int(input("Co wybierasz? 1-ostrosłup (kwadratowy) 2-walec 3-sześcian "))
     if wybor==1: #ostrosłup
         print("podaj wymiary")
         a = float(input("Długość krawędzi podstawy: "))
@@ -113,5 +113,36 @@ def pole_trojkat(a,b,c):
     s = (a + b + c) / 2
     pole = math.sqrt(s * (s - a) * (s - b) * (s - c))
     print(f"Pole trojkata wynosi: {pole}")
-'''
 
+
+#Zadanie 5
+def zmiana_kolejnosci(x):
+    dlugosc=len(x)
+    match dlugosc:
+        case 1: print ("za krótkie")
+        case 2: 
+            text2=x[1]+x[0]
+            print(text2)
+        case 3:
+            text3=x[2]+x[0]+x[1]
+            print(text3)
+        case 4:
+            text4=x[1]+x[0]+x[3]+x[2]
+            text4_2=x[3]+x[0]+x[1]+x[2]
+            print(text4)
+            print(text4_2)
+        case _:
+            print("Wybrano za dużo znaków")
+
+
+def samochod(a,b): #a to cena, b to spalanie
+    match(a,b):
+        case (x,y) if x<=5000 and y<10:
+            print("Samochod jest niedrogi i oszczedny")
+        case (x,y) if x<=5000 and y>10:
+            print("Samochod jest niedrogi i nieoszczedny")  
+        case (x,y) if x>5000 and y<10:
+            print("Samochod jest drogi i oszczedny")  
+        case (x,y) if x>5000 and y>10:
+            print("Samochod jest drogi i nieoszczedny")  
+'''
